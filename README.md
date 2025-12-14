@@ -25,8 +25,8 @@ Telegram-бот для автоматизации первичного каче�
 
 1. Клонируйте репозиторий:
 ```bash
-git clone <repository_url>
-cd risk_analyzer_bot
+git clone https://github.com/ArsenShkryabin/analyzer-bot-.git
+cd analyzer-bot-
 ```
 
 2. Создайте виртуальное окружение:
@@ -47,13 +47,15 @@ pip install -r requirements.txt
 cp .env.example .env
 ```
 
-5. Заполните `.env` файл:
+5. Заполните `.env` файл (откройте `.env` и замените значения):
 ```ini
 TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
-AI_API_URL=https://your-api-service.com/analyze
+AI_API_URL=https://your-api-service.com/v1/chat/completions
 AI_API_KEY=your_api_key_here
-LOG_LEVEL=DEBUG
+AI_MODEL=gpt-4o
+LOG_LEVEL=INFO
 TEMP_FILE_PATH=./temp_files
+API_TIMEOUT=180
 ```
 
 ## Запуск
