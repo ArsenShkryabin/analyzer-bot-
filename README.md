@@ -75,7 +75,7 @@ python main.py
 ## Структура проекта
 
 ```
-risk_analyzer_bot/
+analyzer-bot-/
 ├── main.py                 # Точка входа
 ├── config.py               # Конфигурация
 ├── logger.py               # Настройка логирования
@@ -85,6 +85,10 @@ risk_analyzer_bot/
 ├── docs/                   # Документация
 └── temp_files/             # Временные файлы
 ```
+
+## Быстрая установка на Linux сервер
+
+Подробная инструкция по развертыванию на Linux сервере доступна в [docs/linux_deployment.md](docs/linux_deployment.md)
 
 ## Формат входных данных
 
