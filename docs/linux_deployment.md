@@ -23,9 +23,9 @@ sudo yum install -y python3 python3-pip git
 # Перейдите в нужную директорию
 cd /opt  # или /home/username
 
-# Клонируйте проект (или загрузите файлы)
-git clone <ваш_репозиторий> risk_analyzer_bot
-cd risk_analyzer_bot
+# Клонируйте проект
+git clone https://github.com/ArsenShkryabin/analyzer-bot-.git
+cd analyzer-bot-
 
 # Или загрузите файлы через scp/sftp
 ```
@@ -97,9 +97,9 @@ After=network.target
 [Service]
 Type=simple
 User=ваш_пользователь
-WorkingDirectory=/opt/risk_analyzer_bot
-Environment="PATH=/opt/risk_analyzer_bot/venv/bin"
-ExecStart=/opt/risk_analyzer_bot/venv/bin/python /opt/risk_analyzer_bot/main.py
+WorkingDirectory=/opt/analyzer-bot-
+Environment="PATH=/opt/analyzer-bot-/venv/bin"
+ExecStart=/opt/analyzer-bot-/venv/bin/python /opt/analyzer-bot-/main.py
 Restart=always
 RestartSec=10
 
@@ -108,8 +108,8 @@ WantedBy=multi-user.target
 ```
 
 Замените:
-- `ваш_пользователь` на ваше имя пользователя
-- `/opt/risk_analyzer_bot` на путь к проекту
+- `ваш_пользователь` на ваше имя пользователя (например, `ubuntu` или `root`)
+- `/opt/analyzer-bot-` на путь к проекту (если клонировали в другое место)
 
 Запустите сервис:
 
